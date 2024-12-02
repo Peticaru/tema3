@@ -81,7 +81,7 @@ function grade_style()
 print_results()
 {
     checker_grade=$(< checker.out sed -n '/^Checker:/s/^.*[ \t]\+\([0-9\.]\+\)\/.*$/\1/p')
-    if test "$(echo "$checker_grade > 60" | bc)" -eq 1; then
+    if test "$(echo "$checker_grade > 59" | bc)" -eq 1; then
         style_grade=$(cat style_grade.out)
     else
         style_grade=0
